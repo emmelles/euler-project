@@ -1,0 +1,4 @@
+001: sum of all multiples of 3 and 5 below 1000
+002: sum of even-valued Fibonacci nos that do not exceed 4mil
+003: prime factorising, brute force
+004: smallest palindrome product of three digit numbers
