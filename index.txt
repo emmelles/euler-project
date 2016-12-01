@@ -1,4 +1,13 @@
 001: sum of all multiples of 3 and 5 below 1000
+     (contains isMultipleOf)
 002: sum of even-valued Fibonacci nos that do not exceed 4mil
 003: prime factorising, brute force
+     (contains factorise)
 004: smallest palindrome product of three digit numbers
+005: smallest number divisible by all numbers from 1 to 20
+     (contains prime sieve and prime getter up to specified
+     because I was curious about relative efficiency)
+006: square of the sum - sum of the squares (too easy?)
+007: Nth prime number
+     (contains prime getter up to nth number, also a bunch
+     of random write function e.g. printVector)

@@ -1,4 +1,0 @@
-001: void isMultipleOf(double input, int number)
-     [returns whether a number is a multiple of the specified int]
-     
-002: generating a Fibonacci series
