@@ -11,3 +11,7 @@
 007: Nth prime number
      (contains prime getter up to nth number, also a bunch
      of random write function e.g. printVector)
+008: 1000-digit number in which to find 13 consecutive numbers
+     which yield the highest product
+     (contains a lot of string manipulation and finding in string)
+009: pythagorean triplet which adds up to 1000
