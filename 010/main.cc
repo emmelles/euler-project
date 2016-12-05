@@ -16,20 +16,22 @@ template <class Type> void printVector(vector<Type> myVector) {
 vector<long long> getPrimes(long long);
 
 int main () {
-  long long max=20;
+  cout << "Primes up to? [+ve int]\n";
+  long long max;
+  cin >> max;
   vector<long long> collected;
 
-  cout << "collecting primes " << endl;
+  cout << "Collecting primes, hang on..." << endl;
   collected=getPrimes(max-1); // I mean two million isn't prime but technically this is the question
   
-  /*  long long sum=0;
+  long long sum=0;
   for (vector<long long>::const_iterator i = collected.begin(); i != collected.end(); ++i) {
     long long n=*i;
     sum += n;
   }
-  cout << sum <<endl;*/
+  cout << "Sum of primes up to " << max << " is " << sum <<endl;
 
-  printVector(collected);
+  //printVector(collected);
 }
 
 ////////////////////
@@ -38,21 +40,17 @@ vector<long long> getPrimes(long long upto) {
   
   vector<long long> dummy;
 
-  cout << "pushing back two" << endl;
+  // Pushing back two
   dummy.push_back(2);
-  printVector(dummy);
 
+  // Start iterator loop:
   
   vector<long long>::iterator current_pos=dummy.begin();
     
-  for (long long n=3; n<=upto; n++) {
-    cout<< "current n " << n << endl;
-    cout << "Current highest prime " << *current_pos<< endl;
-    for (vector<long long>::const_iterator m=dummy.begin(); m<=current_pos; m++) {
-      cout << "# Current m content " << *m <<endl;
+  for (long long n=3; n<=upto; n+=2) {
+    for (vector<long long>::const_iterator m = dummy.begin(); m != current_pos+1; m++) {
       if(*m>sqrt(n)) {
 	dummy.push_back(n);
-	printVector(dummy);
         advance(current_pos,1);
 	break;
       }

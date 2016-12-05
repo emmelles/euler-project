@@ -15,3 +15,7 @@
      which yield the highest product
      (contains a lot of string manipulation and finding in string)
 009: pythagorean triplet which adds up to 1000
+010: find sum of primes up to 2 000 000	  
+     (contains a more decent prime collector - faster but keeps all
+     primes collected in memory so keep that in mind)
+011:
