@@ -1,34 +1,36 @@
 001: sum of all multiples of 3 and 5 below 1000
      (contains isMultipleOf)
-     C++
+     #C++
 002: sum of even-valued Fibonacci nos that do not exceed 4mil
-     C++
+     #C++
 003: prime factorising, brute force
      (contains factorise)
-     C++
+     #C++
 004: smallest palindrome product of three digit numbers
-     C++
+     #C++
 005: smallest number divisible by all numbers from 1 to 20
      (contains prime sieve and prime getter up to specified
      because I was curious about relative efficiency)
-     C++
+     #C++
 006: square of the sum - sum of the squares (too easy?)
-     C++
+     #C++
 007: Nth prime number
      (contains prime getter up to nth number, also a bunch
      of random write function e.g. printVector)
-     C++
+     #C++
 008: 1000-digit number in which to find 13 consecutive numbers
      which yield the highest product
      (contains a lot of string manipulation and finding in string)
-     C++
+     #C++
 009: pythagorean triplet which adds up to 1000
-     C++
+     #C++
 010: find sum of primes up to 2 000 000	  
      (contains a more decent prime collector - faster but keeps all
      primes collected in memory so keep that in mind)
      (also made a python version of prime collector)
-     C++/python
+     #C++/python
 011: find largest product in text grid in any direction
-     python
-
+     #python
+012: find first triangle number with over 500 factors
+     (contains py prime getter and up to prime getter)
+     #python

@@ -8,6 +8,8 @@ num=1
 
 lim=501
 
+#~~ BRUTE FORCE ~~#
+
 def divisors(n):
     bound=n**0.5
     fact=0
