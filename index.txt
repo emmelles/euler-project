@@ -34,3 +34,4 @@
 012: find first triangle number with over 500 factors
      (contains py prime getter and up to prime getter)
      #python
+013: large number sum, python supports arbitrarily large int so easy
