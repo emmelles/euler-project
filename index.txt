@@ -42,3 +42,5 @@
 015: paths through a 20x20 grid only moving right and down, used an
      analytical expression, just quicker
      #Mathematica/python
+016: sum of 2**1000 digits
+     #python
