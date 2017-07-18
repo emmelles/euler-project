@@ -39,3 +39,6 @@
      so it runs slightly quicker, and discounting powers of two (this
      does mean that the number of terms in the sequences is slightly off)
      #python
+015: paths through a 20x20 grid only moving right and down, used an
+     analytical expression, just quicker
+     #Mathematica/python
