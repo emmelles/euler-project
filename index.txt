@@ -44,3 +44,6 @@
      #Mathematica/python
 016: sum of 2**1000 digits
      #python
+017: writing out numbers from 1 to 1000 in words (with certain conventions)
+     (contains general number-to-word function)
+     #python
