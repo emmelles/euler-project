@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-f=open("triangle.txt","r")
+f=open("big_triangle.txt","r")
 
 currentline=f.readline().split()
 nextline=f.readline().split()
