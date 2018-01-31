@@ -32,7 +32,8 @@
 011: find largest product in text grid in any direction
      #python
 012: find first triangle number with over 500 factors
-     (contains py prime getter and up to prime getter)
+     (contains py prime getter and up to prime getter, and a bit of
+     testing things)
      #python
 013: large number sum, python supports arbitrarily large int so easy
 014: longer Collatz sequence under a million, caching calculated ones
@@ -47,3 +48,6 @@
 017: writing out numbers from 1 to 1000 in words (with certain conventions)
      (contains general number-to-word function)
      #python
+018: path through pyramid grid yielding maximum sum
+     #python
+019:

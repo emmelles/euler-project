@@ -3,10 +3,10 @@
 from timeit import default_timer as timer
 
 num=1
-# We could assume something more about starting point really,
-# however we definitely know 7th doesn't have 500...
-
 lim=501
+
+def triangle(n):
+    return n*(n+1)*0.5
 
 #~~ BRUTE FORCE ~~#
 
@@ -22,10 +22,7 @@ def divisors(n):
             current+=1
     return fact
 
-def triangle(n):
-    return n*(n+1)*0.5
-
-#~~ METHOD 2 ~~~#
+#~~ MORE COMPLICATED ISN'T ALWAYS BETTER ~~~#
 
 def primes_up_to(upto):
     primes=[2]
@@ -36,7 +33,6 @@ def primes_up_to(upto):
                 primes+=[n]
                 break
     return primes
-
 
 def divisors_using_gen_primes(n,primes):
     fact=1
@@ -50,13 +46,26 @@ def divisors_using_gen_primes(n,primes):
 
 #~~~~~~~~~~~~~~~~~~~~~#
 
-start=timer()
-
 primes=primes_up_to(1000)
+
+start=timer()
 
 current=triangle(num)
 #while divisors(current)<lim:
 while divisors_using_gen_primes(current,primes)<lim:
+    num+=1
+    current=triangle(num)
+
+print int(current)
+
+end=timer()
+print "Time elapsed ", end-start
+
+# Method 2
+start=timer()
+
+current=triangle(num)
+while divisors(current)<lim:
     num+=1
     current=triangle(num)
 
