@@ -50,4 +50,12 @@
      #python
 018: path through pyramid grid yielding maximum sum
      #python
-019:
+019: counting sundays, used content from udacity course cs101 to solve this
+     #python
+020: factorial digit sum, solved in one line with lambda reduce
+     #python
+021: amicable sums, does remove friends of numbers if it finds them
+     #python
+022: sort list and extract values of each name to get a score
+     #python
+     
