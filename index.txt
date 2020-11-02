@@ -55,6 +55,7 @@
 020: factorial digit sum, solved in one line with lambda reduce
      #python
 021: amicable sums, does remove friends of numbers if it finds them
+     (contains proper divisor finder)
      #python
 022: sort list and extract values of each name to get a score
      #python
