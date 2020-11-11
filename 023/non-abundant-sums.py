@@ -1,94 +1,51 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Spyder Editor
+Created on Wed Nov 11 16:36:46 2020
 
-This is a temporary script file.
+@author: mls
 """
+
+# I got so confused on this problem for ages... not great
+
 from math import sqrt
 
-def primesUpTo(n):
-    primes=[2]
-    for x in range(3,n+1):
-        for y in primes:
-            # unfortunately with list comprehension cant figure out how to do sqrt break
-            divs=[]
-            if y>sqrt(x): 
-                break
-            if x % y==0:
-                divs.append(y)
-                break
-        if divs==[]: primes.append(x)
-    return primes
-
-def factorise(n,primes):
-    factors=[1]
-    for x in primes:
-        if x>n:
-            break
-        if n%x==0: 
-            while n%x==0:
-                factors.append(x)
-                n=n/x
-    return factors
-
-def properDivisors(n,primes):
-    #propdivstemp=[x*y for x in factorise(n) for y in factorise(n) if n%(x*y)==0]
-    propdivs=[]
-    divs=factorise(n,primes)
-    #[propdivs.append(x) for x in propdivstemp if x not in propdivs]
-    x=0
-    while x < len(divs):
-        for y in divs:
-            if n % (divs[x]*y)==0 and (divs[x]*y) not in propdivs: propdivs.append(divs[x]*y)
-        divs.pop(0)
-    propdivs.sort()
-    return propdivs
-
-def isAbundant(n,primes):
-    if sum(properDivisors(n,primes))>n: 
-        return True
-    else:
-        return False
+def properDivisors(n):
+    pd=[1]
+    for i in range(2,int(sqrt(n))+1):
+        if n%i==0: 
+            pd+=[i]
+            if int(n/i) not in pd: pd+=[int(n/i)]
+    pd.sort() 
     
-# unfortunately List Comprehension appears to be quite a bit slower (cos double counting?)
+    return pd
 
+def isAbundant(n):
+    return sum(properDivisors(n))>n
 
-lmin=12
+############################################################
+
+lmin=1
 lmax=28123
-#lmax=50
+#lmax=500
 
-primeslist=primesUpTo(lmax)
 
-'''
-x=13
-print(factorise(x,primeslist))
-print(properDivisors(x,primeslist))
-print(isAbundant(x,primeslist))
-'''
+# for x in range(lmin,lmax+1):
+#     print("Proper divisors of",x, "are", properDivisors(x))
 
-abundants=[]
+abundants=[x for x in range(lmin,lmax+1) if isAbundant(x)]
 
-for i in range(lmin,lmax+1):
-    if isAbundant(i,primeslist): abundants.append(i)
+abdsums=[]
 
-#print("Abundant numbers:",abundants)
+while len(abundants): # i.e. >0
+    x=abundants[0]
+    for y in abundants:
+        if (x+y)<lmax: abdsums.append(x+y)   
+        else: break
+    del abundants[0]
 
-sumAbundants=[]
+abdsums.sort()
 
-i=0
-while i<len(abundants):
-    for x in abundants:
-        if (abundants[i]+x)<lmax: 
-            sumAbundants.append(abundants[i]+x)
-    abundants.pop(0)
-
-print("Numbers that can be written as abundant sums:", sumAbundants)
-
-'''
-nonSumAbt=[]
-for x in range(len(sumAbundants)):
-    if x not in sumAbundants: nonSumAbt.append(x)
-    if x>=lmax: break
-
-print("Non abundant sum numbers:", nonSumAbt[-1])
-'''
+# I was gonna get all non abundants but can just subtract from total given that
+# I don't need to do anything else with non-abundant-sums
+print(sum(range(lmax)) - sum(set(abdsums)))
